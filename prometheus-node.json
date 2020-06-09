@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 8,
-  "iteration": 1591716407422,
+  "iteration": 1591716900872,
   "links": [],
   "panels": [
     {
@@ -738,7 +738,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 9,
         "w": 6,
         "x": 0,
         "y": 21
@@ -789,7 +789,7 @@
       "fill": 2,
       "fillGradient": 0,
       "gridPos": {
-        "h": 7,
+        "h": 9,
         "w": 18,
         "x": 6,
         "y": 21
@@ -821,14 +821,14 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(node_network_receive_bytes_total{job=\"$hostname\"}[1m])",
+          "expr": "-sum(rate(node_network_receive_bytes_total{job=\"$hostname\",device=~\"eth0|enp3s0\"}[1m]))",
           "instant": false,
           "interval": "",
           "legendFormat": "RX",
           "refId": "C"
         },
         {
-          "expr": "rate(node_network_transmit_bytes_total{job=\"$hostname\"}[1m])",
+          "expr": "sum(rate(node_network_transmit_bytes_total{job=\"$hostname\",device=~\"eth0|enp3s0\"}[1m]))",
           "instant": false,
           "interval": "",
           "legendFormat": "TX",
@@ -861,7 +861,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": "0",
+          "min": null,
           "show": true
         },
         {
@@ -926,7 +926,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 28
+        "y": 30
       },
       "id": 14,
       "options": {
@@ -977,7 +977,7 @@
         "h": 7,
         "w": 18,
         "x": 6,
-        "y": 28
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 4,
@@ -1065,9 +1065,9 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "node_urb",
-          "value": "node_urb"
+          "selected": false,
+          "text": "node_proxmox",
+          "value": "node_proxmox"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{job=~\"node_.*\"}, job)",
@@ -1091,7 +1091,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -1110,5 +1110,5 @@
   "timezone": "",
   "title": "prometheus-node",
   "uid": "v5CFCciGk",
-  "version": 4
+  "version": 6
 }
