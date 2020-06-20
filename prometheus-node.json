@@ -16,72 +16,9 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 8,
-  "iteration": 1591716900872,
+  "iteration": 1592610048423,
   "links": [],
   "panels": [
-    {
-      "datasource": "Prometheus",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [],
-          "max": 1,
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "#EAB839",
-                "value": 1
-              },
-              {
-                "color": "semi-dark-red",
-                "value": 2
-              }
-            ]
-          },
-          "unit": "short"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 7,
-        "w": 3,
-        "x": 0,
-        "y": 0
-      },
-      "id": 10,
-      "options": {
-        "orientation": "vertical",
-        "reduceOptions": {
-          "calcs": [
-            "last"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
-      },
-      "pluginVersion": "7.0.3",
-      "targets": [
-        {
-          "expr": "node_load1{job=\"$hostname\"}/(  count(count(node_cpu_seconds_total{job=\"$hostname\"}) without (mode)) without (cpu))",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{cpu}}",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "load1",
-      "type": "gauge"
-    },
     {
       "datasource": "Prometheus",
       "fieldConfig": {
@@ -113,8 +50,8 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 3,
-        "x": 3,
+        "w": 6,
+        "x": 0,
         "y": 0
       },
       "id": 13,
@@ -133,7 +70,7 @@
       "pluginVersion": "7.0.3",
       "targets": [
         {
-          "expr": "sum by (cpu) (node_cpu_seconds_total{job=\"$hostname\",mode!=\"idle\"}/1000000)  ",
+          "expr": "1-(sum by (cpu) (node_cpu_seconds_total{job=\"$hostname\",mode=\"idle\"}))/(sum by (cpu)(node_cpu_seconds_total{job=\"$hostname\"}))",
           "hide": false,
           "interval": "",
           "legendFormat": "{{cpu}}",
@@ -194,8 +131,8 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "node_load1{job=\"$hostname\"}",
-          "hide": true,
+          "expr": "1-sum(node_cpu_seconds_total{job=\"$hostname\",mode=\"idle\"})/sum(node_cpu_seconds_total{job=\"$hostname\"})",
+          "hide": false,
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -209,6 +146,7 @@
         },
         {
           "expr": "node_load1{job=\"$hostname\"}/(  count(count(node_cpu_seconds_total{job=\"$hostname\"}) without (mode)) without (cpu))",
+          "hide": true,
           "interval": "",
           "legendFormat": "Normalized load1",
           "refId": "C"
@@ -769,7 +707,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "process count",
+      "title": "active process count",
       "type": "stat"
     },
     {
@@ -909,12 +847,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "light-blue",
                 "value": null
-              },
-              {
-                "color": "#EAB839",
-                "value": 1
               }
             ]
           },
@@ -933,10 +867,10 @@
         "colorMode": "value",
         "graphMode": "area",
         "justifyMode": "auto",
-        "orientation": "vertical",
+        "orientation": "auto",
         "reduceOptions": {
           "calcs": [
-            "last"
+            "mean"
           ],
           "fields": "",
           "values": false
@@ -945,7 +879,7 @@
       "pluginVersion": "7.0.3",
       "targets": [
         {
-          "expr": "node_reboot_required{job=\"$hostname\"}",
+          "expr": "node_filefd_allocated{job=\"$hostname\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "",
@@ -954,7 +888,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "reboot needed",
+      "title": "FD allocation",
       "type": "stat"
     },
     {
@@ -1066,8 +1000,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "node_proxmox",
-          "value": "node_proxmox"
+          "text": "node_mysql01",
+          "value": "node_mysql01"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{job=~\"node_.*\"}, job)",
@@ -1091,7 +1025,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -1110,5 +1044,5 @@
   "timezone": "",
   "title": "prometheus-node",
   "uid": "v5CFCciGk",
-  "version": 6
+  "version": 7
 }
