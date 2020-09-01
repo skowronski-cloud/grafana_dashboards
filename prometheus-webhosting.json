@@ -40,7 +40,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -68,10 +69,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -137,7 +136,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -165,10 +165,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -246,7 +244,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -274,10 +273,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -342,7 +339,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -370,10 +368,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -455,7 +451,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -482,10 +479,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -553,7 +548,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -580,10 +576,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -662,7 +656,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -690,10 +685,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -758,7 +751,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -786,10 +780,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -854,7 +846,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -882,10 +875,8 @@
       "lines": true,
       "linewidth": 1,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -944,7 +935,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 25,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [],
   "templating": {

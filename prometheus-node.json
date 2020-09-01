@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 8,
-  "iteration": 1592610048423,
+  "iteration": 1598987987119,
   "links": [],
   "panels": [
     {
@@ -67,7 +67,7 @@
         },
         "showUnfilled": true
       },
-      "pluginVersion": "7.0.3",
+      "pluginVersion": "7.1.4",
       "targets": [
         {
           "expr": "1-(sum by (cpu) (node_cpu_seconds_total{job=\"$hostname\",mode=\"idle\"}))/(sum by (cpu)(node_cpu_seconds_total{job=\"$hostname\"}))",
@@ -92,7 +92,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -118,10 +119,8 @@
       "lines": true,
       "linewidth": 2,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -232,9 +231,10 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.3",
+      "pluginVersion": "7.1.4",
       "targets": [
         {
           "expr": "node_memory_MemFree_bytes{job=\"$hostname\"}",
@@ -285,9 +285,10 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.3",
+      "pluginVersion": "7.1.4",
       "targets": [
         {
           "expr": "node_memory_MemTotal_bytes{job=\"$hostname\"}",
@@ -312,7 +313,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -338,10 +340,8 @@
       "lines": true,
       "linewidth": 2,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -448,9 +448,10 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.3",
+      "pluginVersion": "7.1.4",
       "targets": [
         {
           "expr": "node_filesystem_avail_bytes{job=\"$hostname\",mountpoint=\"/\"}",
@@ -501,9 +502,10 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.3",
+      "pluginVersion": "7.1.4",
       "targets": [
         {
           "expr": "node_filesystem_size_bytes{job=\"$hostname\",mountpoint=\"/\"}",
@@ -527,7 +529,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -553,10 +556,8 @@
       "lines": true,
       "linewidth": 2,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -693,9 +694,10 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.3",
+      "pluginVersion": "7.1.4",
       "targets": [
         {
           "expr": "node_procs_running {job=\"$hostname\"}",
@@ -720,7 +722,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -746,10 +749,8 @@
       "lines": true,
       "linewidth": 2,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -874,9 +875,10 @@
           ],
           "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.3",
+      "pluginVersion": "7.1.4",
       "targets": [
         {
           "expr": "node_filefd_allocated{job=\"$hostname\"}",
@@ -901,7 +903,8 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -927,10 +930,8 @@
       "lines": true,
       "linewidth": 2,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "percentage": false,
+      "pluginVersion": "7.1.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -991,7 +992,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 25,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1044,5 +1045,5 @@
   "timezone": "",
   "title": "prometheus-node",
   "uid": "v5CFCciGk",
-  "version": 7
+  "version": 8
 }
