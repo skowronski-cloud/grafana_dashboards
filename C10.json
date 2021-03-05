@@ -323,15 +323,15 @@
           }
         ],
         "executionErrorState": "keep_state",
-        "for": "30m",
-        "frequency": "10m",
+        "for": "3m",
+        "frequency": "1m",
         "handler": 1,
         "message": "Air Pollution Alert",
         "name": "Air Pollution alert",
         "noDataState": "keep_state",
         "notifications": [
           {
-            "uid": "pg0nCiyZz"
+            "uid": "r9ALWjfGk"
           }
         ]
       },
@@ -374,9 +374,12 @@
       "linewidth": 3,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.3.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -396,7 +399,7 @@
             },
             {
               "params": [
-                "linear"
+                "0"
               ],
               "type": "fill"
             }
@@ -435,7 +438,7 @@
             },
             {
               "params": [
-                "linear"
+                "0"
               ],
               "type": "fill"
             }
@@ -796,9 +799,12 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.3.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -940,9 +946,12 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.3.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1996,7 +2005,11 @@
         "message": "Smog sensor is down",
         "name": "WiFi power alert",
         "noDataState": "alerting",
-        "notifications": []
+        "notifications": [
+          {
+            "uid": "r9ALWjfGk"
+          }
+        ]
       },
       "aliasColors": {
         "WiFi power": "semi-dark-green"
@@ -2018,7 +2031,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 33
+        "y": 19
       },
       "hiddenSeries": false,
       "id": 12,
@@ -2036,9 +2049,12 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "7.1.4",
+      "pluginVersion": "7.3.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2058,7 +2074,7 @@
             },
             {
               "params": [
-                "previous"
+                "null"
               ],
               "type": "fill"
             }
@@ -2140,7 +2156,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 40
+        "y": 26
       },
       "id": 27,
       "panels": [
@@ -2511,7 +2527,7 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {
@@ -2541,5 +2557,5 @@
   "timezone": "",
   "title": "C10",
   "uid": "9AA9-nQmk",
-  "version": 9
+  "version": 21
 }
