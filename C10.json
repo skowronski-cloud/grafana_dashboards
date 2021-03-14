@@ -43,7 +43,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -162,7 +162,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "decimals": 1,
       "fieldConfig": {
         "defaults": {
@@ -342,7 +342,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "fieldConfig": {
         "defaults": {
           "custom": {},
@@ -526,7 +526,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -645,7 +645,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -767,7 +767,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "decimals": 1,
       "fieldConfig": {
         "defaults": {
@@ -914,7 +914,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "decimals": 1,
       "fieldConfig": {
         "defaults": {
@@ -1094,7 +1094,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": "InfluxDB_luftdaten",
       "fieldConfig": {
         "defaults": {
           "custom": {},
