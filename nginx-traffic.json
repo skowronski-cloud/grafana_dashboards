@@ -1,0 +1,403 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 19,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {
+        "0K reqs/min": "dark-green",
+        "4XX reqs/min": "semi-dark-yellow",
+        "5XX reqs/min": "semi-dark-red",
+        "OK reqs/min": "dark-green"
+      },
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Loki",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\"}[1m])",
+          "hide": true,
+          "legendFormat": "ALL reqs/min",
+          "queryType": "randomWalk",
+          "refId": "A"
+        },
+        {
+          "expr": "rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\"}|~`.* [123]\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "OK reqs/min",
+          "queryType": "randomWalk",
+          "refId": "B"
+        },
+        {
+          "expr": "rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\"}|~`.* 4\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "4XX reqs/min",
+          "queryType": "randomWalk",
+          "refId": "C"
+        },
+        {
+          "expr": "rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\"}|~`.* 5\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "5XX reqs/min",
+          "queryType": "randomWalk",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "www0x traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:65",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:66",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "0K reqs/min": "dark-green",
+        "4XX reqs/min": "semi-dark-yellow",
+        "5XX reqs/min": "semi-dark-red",
+        "OK reqs/min": "dark-green"
+      },
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Loki",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate({hostname=~`intranet.ds`,job=\"nginx_access\"}[1m])",
+          "hide": true,
+          "legendFormat": "ALL reqs/min",
+          "queryType": "randomWalk",
+          "refId": "A"
+        },
+        {
+          "expr": "rate({hostname=~`intranet.ds`,job=\"nginx_access\"}|~`.* [123]\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "OK reqs/min",
+          "queryType": "randomWalk",
+          "refId": "B"
+        },
+        {
+          "expr": "rate({hostname=~`intranet.ds`,job=\"nginx_access\"}|~`.* 4\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "4XX reqs/min",
+          "queryType": "randomWalk",
+          "refId": "C"
+        },
+        {
+          "expr": "rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\"}|~`.* 5\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "5XX reqs/min",
+          "queryType": "randomWalk",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "intranet traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:65",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:66",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "0K reqs/min": "dark-green",
+        "4XX reqs/min": "semi-dark-yellow",
+        "5XX reqs/min": "semi-dark-red"
+      },
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Loki",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "hiddenSeries": false,
+      "id": 3,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\"}[1m])",
+          "hide": true,
+          "legendFormat": "ALL reqs/min",
+          "queryType": "randomWalk",
+          "refId": "A"
+        },
+        {
+          "expr": "rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\"}|~`.* [123]\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "OK reqs/min",
+          "queryType": "randomWalk",
+          "refId": "B"
+        },
+        {
+          "expr": "rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\"}|~`.* 4\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "4XX reqs/min",
+          "queryType": "randomWalk",
+          "refId": "C"
+        },
+        {
+          "expr": "rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\"}|~`.* 5\\d\\d \\d+.*`[1m])",
+          "hide": false,
+          "legendFormat": "5XX reqs/min",
+          "queryType": "randomWalk",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "www2x traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:65",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:66",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "nginx traffic",
+  "uid": "M8KFsD_Mk",
+  "version": 3
+}
