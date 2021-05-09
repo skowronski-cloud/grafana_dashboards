@@ -20,10 +20,10 @@
   "panels": [
     {
       "aliasColors": {
-        "0K reqs/min": "dark-green",
-        "4XX reqs/min": "semi-dark-yellow",
-        "5XX reqs/min": "semi-dark-red",
-        "OK reqs/min": "dark-green"
+        "0K reqs/hr": "dark-green",
+        "4XX reqs/hr": "semi-dark-yellow",
+        "5XX reqs/hr": "semi-dark-red",
+        "OK reqs/hr": "dark-green"
       },
       "bars": true,
       "dashLength": 10,
@@ -59,7 +59,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "7.5.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -69,23 +69,23 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\",status=~\"[123]..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\",status=~\"[123]..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "OK reqs/min",
+          "legendFormat": "OK reqs/hr",
           "queryType": "randomWalk",
           "refId": "B"
         },
         {
-          "expr": "sum(rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\",status=~\"4..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\",status=~\"4..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "4XX reqs/min",
+          "legendFormat": "4XX reqs/hr",
           "queryType": "randomWalk",
           "refId": "C"
         },
         {
-          "expr": "sum(rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\",status=~\"5..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`www0\\d\\.ds`,job=\"nginx_access\",status=~\"5..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "5XX reqs/min",
+          "legendFormat": "5XX reqs/hr",
           "queryType": "randomWalk",
           "refId": "D"
         }
@@ -135,10 +135,10 @@
     },
     {
       "aliasColors": {
-        "0K reqs/min": "dark-green",
-        "4XX reqs/min": "semi-dark-yellow",
-        "5XX reqs/min": "semi-dark-red",
-        "OK reqs/min": "dark-green"
+        "0K reqs/hr": "dark-green",
+        "4XX reqs/hr": "semi-dark-yellow",
+        "5XX reqs/hr": "semi-dark-red",
+        "OK reqs/hr": "dark-green"
       },
       "bars": true,
       "dashLength": 10,
@@ -174,7 +174,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "7.5.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -184,23 +184,23 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate({hostname=~`intranet.ds`,job=\"nginx_access\",status=~\"[123]..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`intranet.ds`,job=\"nginx_access\",status=~\"[123]..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "OK reqs/min",
+          "legendFormat": "OK reqs/hr",
           "queryType": "randomWalk",
           "refId": "B"
         },
         {
-          "expr": "sum(rate({hostname=~`intranet.ds`,job=\"nginx_access\",status=~\"4..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`intranet.ds`,job=\"nginx_access\",status=~\"4..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "4XX reqs/min",
+          "legendFormat": "4XX reqs/hr",
           "queryType": "randomWalk",
           "refId": "C"
         },
         {
-          "expr": "sum(rate({hostname=~`intranet.ds`,job=\"nginx_access\",status=~\"5..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`intranet.ds`,job=\"nginx_access\",status=~\"5..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "5XX reqs/min",
+          "legendFormat": "5XX reqs/hr",
           "queryType": "randomWalk",
           "refId": "D"
         }
@@ -250,10 +250,10 @@
     },
     {
       "aliasColors": {
-        "0K reqs/min": "dark-green",
-        "4XX reqs/min": "semi-dark-yellow",
-        "5XX reqs/min": "semi-dark-red",
-        "OK reqs/min": "dark-green"
+        "0K reqs/hr": "dark-green",
+        "4XX reqs/hr": "semi-dark-yellow",
+        "5XX reqs/hr": "semi-dark-red",
+        "OK reqs/hr": "dark-green"
       },
       "bars": true,
       "dashLength": 10,
@@ -289,7 +289,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "7.5.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -299,23 +299,23 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\",status=~\"[123]..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\",status=~\"[123]..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "OK reqs/min",
+          "legendFormat": "OK reqs/hr",
           "queryType": "randomWalk",
           "refId": "B"
         },
         {
-          "expr": "sum(rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\",status=~\"4..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\",status=~\"4..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "4XX reqs/min",
+          "legendFormat": "4XX reqs/hr",
           "queryType": "randomWalk",
           "refId": "C"
         },
         {
-          "expr": "sum(rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\",status=~\"5..\"}[1m])) by (hostname)",
+          "expr": "sum(rate({hostname=~`www2\\d\\.ds`,job=\"nginx_access\",status=~\"5..\"}[1h])) by (hostname)",
           "hide": false,
-          "legendFormat": "5XX reqs/min",
+          "legendFormat": "5XX reqs/hr",
           "queryType": "randomWalk",
           "refId": "D"
         }
@@ -372,7 +372,7 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {},
