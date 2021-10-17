@@ -19,11 +19,13 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 2,
   "id": 6,
-  "iteration": 1632495516610,
+  "iteration": 1634507870477,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -423,7 +425,7 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -431,7 +433,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "All",
           "value": "$__all"
         },
@@ -462,9 +464,14 @@
             "selected": false,
             "text": "webd0x_home",
             "value": "webd0x_home"
+          },
+          {
+            "selected": false,
+            "text": "webd0x_lovecraft",
+            "value": "webd0x_lovecraft"
           }
         ],
-        "query": "webd0x_blog,webd0x_foto,webd0x_home",
+        "query": "webd0x_blog,webd0x_foto,webd0x_home,webd0x_lovecraft",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
@@ -492,5 +499,5 @@
   "timezone": "",
   "title": "haproxy_traffic",
   "uid": "oDxUuhN7k",
-  "version": 8
+  "version": 9
 }
