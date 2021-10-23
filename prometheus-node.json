@@ -8,16 +8,24 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 8,
-  "iteration": 1616984013104,
+  "id": 2,
+  "iteration": 1635024589428,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "datasource": "Prometheus",
@@ -67,7 +75,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "targets": [
         {
           "exemplar": true,
@@ -123,7 +131,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -226,11 +234,11 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_memory_MemFree_bytes{hostname=\"$hostname\"}",
+          "expr": "node_memory_MemAvailable_bytes{hostname=\"$hostname\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -281,7 +289,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "targets": [
         {
           "exemplar": true,
@@ -337,7 +345,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -353,7 +361,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "node_memory_Active_bytes{hostname=\"$hostname\"}/node_memory_MemTotal_bytes{hostname=\"$hostname\"}",
+          "expr": "(node_memory_MemTotal_bytes{hostname=\"$hostname\"}-node_memory_MemAvailable_bytes{hostname=\"$hostname\"})/node_memory_MemTotal_bytes{hostname=\"$hostname\"}",
           "interval": "",
           "legendFormat": "RAM usage",
           "refId": "C"
@@ -443,7 +451,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "targets": [
         {
           "exemplar": true,
@@ -498,7 +506,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "targets": [
         {
           "exemplar": true,
@@ -553,7 +561,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -643,22 +651,15 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 0,
-              "operator": "",
-              "text": "ok",
-              "to": "",
-              "type": 1,
-              "value": "0"
-            },
-            {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "reboot required",
-              "to": "",
-              "type": 1,
-              "value": "1"
+              "options": {
+                "0": {
+                  "text": "ok"
+                },
+                "1": {
+                  "text": "reboot required"
+                }
+              },
+              "type": "value"
             }
           ],
           "max": 1,
@@ -698,7 +699,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "targets": [
         {
           "exemplar": true,
@@ -754,7 +755,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -765,7 +766,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "-sum(rate(node_network_receive_bytes_total{hostname=\"$hostname\",device=~\"eth0|enp3s0\"}[1m]))",
+          "expr": "-sum(rate(node_network_receive_bytes_total{hostname=\"$hostname\",device=~\"eth0|enp9s0\"}[1m]))",
           "instant": false,
           "interval": "",
           "legendFormat": "RX",
@@ -773,7 +774,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(rate(node_network_transmit_bytes_total{hostname=\"$hostname\",device=~\"eth0|enp3s0\"}[1m]))",
+          "expr": "sum(rate(node_network_transmit_bytes_total{hostname=\"$hostname\",device=~\"eth0|enp9s0\"}[1m]))",
           "instant": false,
           "interval": "",
           "legendFormat": "TX",
@@ -831,22 +832,15 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 0,
-              "operator": "",
-              "text": "ok",
-              "to": "",
-              "type": 1,
-              "value": "0"
-            },
-            {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "reboot required",
-              "to": "",
-              "type": 1,
-              "value": "1"
+              "options": {
+                "0": {
+                  "text": "ok"
+                },
+                "1": {
+                  "text": "reboot required"
+                }
+              },
+              "type": "value"
             }
           ],
           "max": 1,
@@ -886,7 +880,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "targets": [
         {
           "exemplar": true,
@@ -942,7 +936,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.1",
+      "pluginVersion": "8.2.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1005,8 +999,8 @@
       }
     }
   ],
-  "refresh": false,
-  "schemaVersion": 27,
+  "refresh": "30s",
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1014,9 +1008,9 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
-          "text": "psql01.ds",
-          "value": "psql01.ds"
+          "selected": true,
+          "text": "loki01.rlyeh.ds",
+          "value": "loki01.rlyeh.ds"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{hostname=~\".*\"}, hostname)",
@@ -1037,7 +1031,6 @@
         "skipUrlSync": false,
         "sort": 0,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
@@ -1045,7 +1038,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -1064,5 +1057,5 @@
   "timezone": "",
   "title": "Prometheus Monitoring - Node Exporter - System Resources",
   "uid": "v5CFCciGk",
-  "version": 17
+  "version": 3
 }
