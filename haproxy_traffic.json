@@ -20,16 +20,14 @@
   },
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "gnetId": null,
   "graphTooltip": 2,
   "id": 6,
-  "iteration": 1634507870477,
+  "iteration": 1649200732881,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "collapsed": false,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -43,7 +41,10 @@
       "type": "row"
     },
     {
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "21eQNgWnk"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -212,7 +213,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "single"
+          "mode": "single",
+          "sort": "none"
         }
       },
       "targets": [
@@ -237,7 +239,10 @@
       "type": "timeseries"
     },
     {
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "21eQNgWnk"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -375,7 +380,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "single"
+          "mode": "single",
+          "sort": "none"
         }
       },
       "targets": [
@@ -425,23 +431,19 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 31,
+  "schemaVersion": 35,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": [
       {
-        "allValue": null,
         "current": {
           "selected": true,
           "text": "All",
           "value": "$__all"
         },
-        "description": null,
-        "error": null,
         "hide": 1,
         "includeAll": true,
-        "label": null,
         "multi": false,
         "name": "haproxy_backend",
         "options": [
@@ -499,5 +501,6 @@
   "timezone": "",
   "title": "haproxy_traffic",
   "uid": "oDxUuhN7k",
-  "version": 9
+  "version": 10,
+  "weekStart": ""
 }

@@ -8,25 +8,34 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
   },
   "editable": true,
-  "gnetId": null,
+  "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 16,
-  "iteration": 1615742818756,
+  "id": 3,
+  "iteration": 1649200739310,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
-      "datasource": "InfluxDB_PPP",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "003QNRW7z"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -62,7 +71,7 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "groupBy": [
@@ -106,7 +115,10 @@
       "type": "stat"
     },
     {
-      "datasource": "InfluxDB_PPP",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "003QNRW7z"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -122,7 +134,8 @@
             "hideFrom": {
               "graph": false,
               "legend": false,
-              "tooltip": false
+              "tooltip": false,
+              "viz": false
             },
             "lineInterpolation": "stepAfter",
             "lineWidth": 2,
@@ -131,7 +144,14 @@
               "type": "linear"
             },
             "showPoints": "always",
-            "spanNulls": true
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
           },
           "mappings": [],
           "thresholds": {
@@ -155,8 +175,9 @@
           "displayMode": "hidden",
           "placement": "bottom"
         },
-        "tooltipOptions": {
-          "mode": "multi"
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "pluginVersion": "7.4.3",
@@ -207,19 +228,19 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Deltas",
       "type": "timeseries"
     },
     {
-      "datasource": "InfluxDB_PPP",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "003QNRW7z"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "decimals": 1,
           "mappings": [],
           "thresholds": {
@@ -257,7 +278,7 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.4.5",
       "targets": [
         {
           "groupBy": [
@@ -308,12 +329,9 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB_PPP",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "influxdb",
+        "uid": "003QNRW7z"
       },
       "fill": 2,
       "fillGradient": 0,
@@ -341,7 +359,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "8.4.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -435,9 +453,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Over Time",
       "tooltip": {
         "shared": true,
@@ -446,9 +462,7 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
@@ -459,7 +473,6 @@
           "format": "m",
           "label": "",
           "logBase": 1,
-          "max": null,
           "min": "0",
           "show": true
         },
@@ -469,37 +482,34 @@
           "format": "short",
           "label": "",
           "logBase": 1,
-          "max": null,
           "min": "0",
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     }
   ],
   "refresh": "1m",
-  "schemaVersion": 27,
+  "schemaVersion": 35,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": [
       {
-        "allValue": null,
         "current": {
           "selected": false,
           "text": "daniel@dsinf.net",
           "value": "daniel@dsinf.net"
         },
-        "datasource": "InfluxDB_PPP",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "003QNRW7z"
+        },
         "definition": "show measurements;",
-        "description": null,
-        "error": null,
         "hide": 0,
         "includeAll": false,
-        "label": null,
         "multi": false,
         "name": "account",
         "options": [],
@@ -509,7 +519,6 @@
         "skipUrlSync": false,
         "sort": 0,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
@@ -537,5 +546,6 @@
   "timezone": "",
   "title": "Pocket++",
   "uid": "p-x1nGUGz",
-  "version": 11
+  "version": 1,
+  "weekStart": ""
 }
