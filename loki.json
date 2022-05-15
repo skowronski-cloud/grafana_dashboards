@@ -25,7 +25,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 28,
-  "iteration": 1652642363366,
+  "iteration": 1652644023162,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -125,7 +125,7 @@
             "type": "loki",
             "uid": "BICPjGMnz"
           },
-          "expr": "{hostname=\"$hostname\"} |~ \"warn|error|crit\" !~ \"error.notify|pserrorhandler.requested|will retry|smartmon.prom\"",
+          "expr": "{hostname=\"$hostname\"} |~ \"warn|error|crit\" !~ \"error.notify|pserrorhandler.requested|will retry|smartmon.prom|kex_exchange_identification: |https.in|failed to read textfile collector directory\"",
           "refId": "A"
         }
       ],
@@ -140,9 +140,9 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "rpi.rlyeh.ds",
-          "value": "rpi.rlyeh.ds"
+          "selected": true,
+          "text": "ulthar.rlyeh.ds",
+          "value": "ulthar.rlyeh.ds"
         },
         "datasource": {
           "type": "loki",
@@ -184,6 +184,6 @@
   "timezone": "",
   "title": "Loki Monitoring - /var/logs",
   "uid": "NvL_OSunz",
-  "version": 2,
+  "version": 4,
   "weekStart": ""
 }
