@@ -25,7 +25,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 28,
-  "iteration": 1652644023162,
+  "iteration": 1656867801144,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -81,7 +81,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.1",
+      "pluginVersion": "8.5.4",
       "targets": [
         {
           "datasource": {
@@ -125,7 +125,7 @@
             "type": "loki",
             "uid": "BICPjGMnz"
           },
-          "expr": "{hostname=\"$hostname\"} |~ \"warn|error|crit\" !~ \"error.notify|pserrorhandler.requested|will retry|smartmon.prom|kex_exchange_identification: |https.in|failed to read textfile collector directory\"",
+          "expr": "{hostname=\"$hostname\"} |~ \"warn|error|crit\" !~ \"error.notify|pserrorhandler.requested|will retry|smartmon.prom|kex_exchange_identification: |https.in|failed to read textfile collector directory|collector failed|\\\\(0 fatal\"",
           "refId": "A"
         }
       ],
@@ -140,9 +140,9 @@
     "list": [
       {
         "current": {
-          "selected": true,
-          "text": "ulthar.rlyeh.ds",
-          "value": "ulthar.rlyeh.ds"
+          "selected": false,
+          "text": "rlyeh.rlyeh.ds",
+          "value": "rlyeh.rlyeh.ds"
         },
         "datasource": {
           "type": "loki",
@@ -184,6 +184,6 @@
   "timezone": "",
   "title": "Loki Monitoring - /var/logs",
   "uid": "NvL_OSunz",
-  "version": 4,
+  "version": 7,
   "weekStart": ""
 }
